@@ -117,13 +117,6 @@ export default function(opt) {
 
     const appCallback = app.callback();
 
-    server.keepAliveTimeout = 120000; // Keep alive for 2 minutes
-    server.headersTimeout = 130000;
-    
-    server.on('connection', (socket) => {
-      socket.setKeepAlive(true, 10000); // Send a keep-alive packet every 10 seconds
-    });
-
     server.on('request', (req, res) => {
         // without a hostname, we won't know who the request is for
         const hostname = req.headers.host;
