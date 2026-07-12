@@ -11,4 +11,4 @@ COPY . /app
 
 ENV NODE_ENV production
 ENTRYPOINT ["node", "-r", "esm", "./bin/server"]
-CMD ["--port", "10000", "--domain", "tunnel.localfitness.dk"]
+CMD ["--port", "10000", "--domain", "tunnel.codeshop.dk"]
